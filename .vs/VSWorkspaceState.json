@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\cliente",
-    "\\cliente\\templates"
+    "\\cliente\\templates",
+    "\\JuliusDescontos"
   ],
-  "SelectedNode": "\\cliente\\urls.py",
+  "SelectedNode": "\\cliente\\templates\\cadastro.html",
   "PreviewInSolutionExplorer": false
 }

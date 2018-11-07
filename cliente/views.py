@@ -11,3 +11,6 @@ def login (request):
 def cadastro (request):
     return render(request, 'cadastro.html')
 
+def recSenha (request):
+    return render(request, 'recSenha.html')
+

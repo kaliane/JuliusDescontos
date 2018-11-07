@@ -2,11 +2,10 @@
 {% block title %}Login{% endblock %}
 {% block body %}
 
-margin-top: 50%;
 
-<div class="container">
+<div class="container mt-5">
     <form class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col-md-6 offset-md-3 my-5">
             <div class="form-group">
                 <label for="exampleDropdownFormEmail1">Endereço de email</label>
                 <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@exemplo.com">
@@ -15,9 +14,12 @@ margin-top: 50%;
                 <label for="exampleDropdownFormPassword1">Senha</label>
                 <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
             </div>
-            <button type="submit" class="btn btn-primary">Entrar</button>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Entrar</button>
+            </div>
     </form>
     <div class="dropdown-divider"></div>
     <a class="dropdown-item" href="cadastro">Não possui uma conta? Regitre-se agora.</a>
+    <a class="dropdown-item" href="recSenha">Esqueceu sua senha?</a>
 </div>
 {% endblock %}
