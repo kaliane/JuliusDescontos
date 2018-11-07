@@ -1,0 +1,26 @@
+﻿{% extends 'base.html' %}
+{% block title %}Cadastro{% endblock %}
+{% block body %}
+
+margin-top: 50%;
+
+<div class="container">
+    <form class="row">
+        <div class="col-md-6 offset-md-3">
+            <div class="form-group">
+                <label for="exampleDropdownFormEmail1">Nome Completo</label>
+                <input type="text" class="form-control" id="exampleDropdownFormEmail1" placeholder="Nome completo">
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Endereço de email</label>
+                <input type="email" class="form-control" id="exampleDropdownFormPassword1" placeholder="email@exemplo.com">
+            </div>
+            <div class="form-group">
+                <label for="exampleDropdownFormPassword1">Senha</label>
+                <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Senha">
+            </div>
+            <button type="submit" class="btn btn-primary">cadastrar</button>
+</form>
+</div>
+
+{% endblock %}
