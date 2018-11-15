@@ -25,6 +25,7 @@ urlpatterns = [
     path('login', views.login),
     path('cadastro', views.cadastro),
     path('recSenha', views.recSenha),
+    path('cadastroPromocao', views.cadastroPromocao),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 

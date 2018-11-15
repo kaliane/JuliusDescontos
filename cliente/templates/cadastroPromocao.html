@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title %}Cadastro Promoção{% endblock %}s
+{% block body %}
+
+<div class="container mt-5">
+    <form class="row justify-content-center">
+        <div class="col-md-6 my-5">
+            <div class="form-group">
+                <label for="InputNomeComercio">Nome do comércio</label>
+                <input type="text" class="form-control" id="nomeComercio" placeholder="Ex.: Loja Diversos">
+            </div>
+            <div class="form-group">
+                <label for="DropdownCategoria">Categoria</label>
+                <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Outros</option>
+                    <option>Agronegócios</option>
+                    <option>Alimentos e Bebidas</option>
+                    <option>Autopeças e Serviços</option>
+                    <option>Beleza e Estética</option>
+                    <option>Comunicação e Marketing</option>
+                    <option>Construção e Reforma</option>
+                    <option>Embalagens</option>
+                    <option>Escolas e Cursos</option>
+                    <option>Informática e Tecnologia</option>
+                    <option>Internet</option>
+                    <option>Lojas e Variedades</option>
+                    <option>Papelarias e Livrarias</option>
+                    <option>Pet Shop</option>
+                    <option>Restaurantes e Bares</option>
+                    <option>Saúde</option>
+                    <option>Serviços Diversos</option>
+                    <option>Transporte</option>
+                    <option>Turismo e Hotelaria</option>
+                    <option>Vestuário</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Inputvalor">Valor do desconto (%)</label>
+                <input type="number" class="form-control" id="valor" step="0.010" placeholder='5,5'>
+            </div>
+
+            <label>Tipo de usuário</label> <br>
+            <div class="custom-control custom-radio custom-control-inline">
+            <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadios1" value="opcao1">
+            <label class="custom-control-label" for="exampleRadios1"> Estudante </label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input class="custom-control-input" type="radio" name="exampleRadios" id="exampleRadios2" value="opcao2">
+              <label class="custom-control-label" for="exampleRadios2"> Geral </label>
+            </div>
+
+            <br><br>
+            <label>Tipo de desconto</label> <br>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input class="custom-control-input" type="radio" name="exampleRadios2" id="exampleRadios3" onclick="desabilitarData()" value="option3">
+              <label class="custom-control-label" for="exampleRadios3"> Desconto Fixo </label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input class="custom-control-input" type="radio" name="exampleRadios2" id="exampleRadios4" onclick = "habilitarData()" value="option4">
+              <label class="custom-control-label" for="exampleRadios4"> Promoção </label>
+            </div>
+
+            <br><br>
+            <div class="row">
+                <div class="col">
+                    <div class="form-group">
+                        <label>Data inicio da promoção</label>
+                        <input type="date" class="form-control" id="dataInicio">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <label>Data final da promoção</label>
+                        <input type="date" class="form-control" id="dataFim">
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="Inputobs">Observação</label>
+                <input type="text" class="form-control" id="obs"placeholder='Ex.: Desconto somente para xícaras.'>
+            </div>
+
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">cadastrar</button>
+            </div>
+        </div>
+
+</form>
+</div>
+
+<script type="text/javascript">
+    function desabilitarData(){
+        document.getElementById('dataInicio').setAttribute("disabled","disabled");
+        document.getElementById('dataFim').setAttribute("disabled","disabled");
+
+    }
+    function habilitarData(){
+        document.getElementById('dataInicio').removeAttribute("disabled");
+        document.getElementById('dataFim').removeAttribute("disabled");
+    }
+
+</script>
+{% endblock %}

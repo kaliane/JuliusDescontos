@@ -14,3 +14,6 @@ def cadastro (request):
 def recSenha (request):
     return render(request, 'recSenha.html')
 
+def cadastroPromocao (request):
+	return render(request, 'cadastroPromocao.html')	
+
