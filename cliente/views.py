@@ -18,6 +18,7 @@ def cadastro (request):
 def recSenha (request):
     return render(request, 'recSenha.html')
 
+<<<<<<< HEAD
 def cadastroSuc (request):
     return render(request, 'cadastroSuc.html')
 
@@ -35,4 +36,8 @@ def cadastro(request):
     else:
         form = formCadastro()
     return render(request, 'cadastro.html', {'form': form})
+=======
+def cadastroPromocao (request):
+	return render(request, 'cadastroPromocao.html')	
+>>>>>>> f1a28a4a2b50231f1204ba94c795e30b13bb638a
 
