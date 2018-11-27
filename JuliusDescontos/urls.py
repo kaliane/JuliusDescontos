@@ -28,17 +28,11 @@ urlpatterns = [
     path('loogin', views.loogin),
     path('cadastro', views.cadastro),
     path('recSenha', views.recSenha),
-<<<<<<< HEAD
     path('cadastroSuc', views.cadastroSuc),
-<<<<<<< HEAD
     path('cadastroPromocao', produto_views.cadastroPromocao),
     url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
     url(r'^deslogar/$', views.deslogar, name='deslogar'),
-=======
-=======
     path('cadastroPromocao', views.cadastroPromocao),
->>>>>>> f1a28a4a2b50231f1204ba94c795e30b13bb638a
->>>>>>> 5cdc24949c22d6bdc9d8dc9d1e24680396956cfb
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
