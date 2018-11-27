@@ -22,6 +22,7 @@ def cadastro (request):
 def recSenha (request):
     return render(request, '../templates/recSenha.html')
 
+<<<<<<< HEAD
 def cadastroSuc (request):
     return render(request, '../templates/cadastroSuc.html')
 
@@ -33,5 +34,15 @@ def cadastro(request):
             login(request, user)
             return HttpResponseRedirect('loogin')
     else:
+<<<<<<< HEAD
         form = SignUpForm()
     return render(request, '../templates/cadastro.html', {'form': form})
+=======
+        form = formCadastro()
+    return render(request, 'cadastro.html', {'form': form})
+=======
+def cadastroPromocao (request):
+	return render(request, 'cadastroPromocao.html')	
+>>>>>>> f1a28a4a2b50231f1204ba94c795e30b13bb638a
+
+>>>>>>> 5cdc24949c22d6bdc9d8dc9d1e24680396956cfb
