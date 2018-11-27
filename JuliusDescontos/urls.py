@@ -14,10 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.conf.urls import url
+from django.contrib.auth import views as auth_views
 from django.urls import path
 from cliente import views
 from django.conf import settings
 from django.conf.urls.static import static
+from produtos import views as produto_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +29,9 @@ urlpatterns = [
     path('cadastro', views.cadastro),
     path('recSenha', views.recSenha),
     path('cadastroSuc', views.cadastroSuc),
+    path('cadastroPromocao', produto_views.cadastroPromocao),
+    url(r'^logout/$', auth_views.LogoutView.as_view(), name='logout'),
+    url(r'^deslogar/$', views.deslogar, name='deslogar'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
